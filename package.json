@@ -1,0 +1,19 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "Twitter mirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "twitter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianmichaeld/twitter-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianmichaeld/twitter-js/issues"
+  },
+  "homepage": "https://github.com/ianmichaeld/twitter-js#readme"
+}
