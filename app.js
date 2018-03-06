@@ -6,12 +6,15 @@ const nunjucks = require( 'nunjucks' );
 const app = express(); // creates an instance of an express application
 
 const port = 3000;
+const routes = require('./routes');
 
 // app.use( (req, res, next) => {
-//   console.log( req.method, req.path, res.statusCode );
-//   next();
-// })
+  //   console.log( req.method, req.path, res.statusCode );
+  //   next();
+  // })
 app.use(volleyball);
+
+app.use('/', routes);
 
 app.use( '/special', (req, res, next) => {
   res.send( 'Aren\'t you special?');
@@ -23,15 +26,6 @@ app.engine('html', nunjucks.render); // when giving html files to res.render, te
 nunjucks.configure('views', {
   nocache: true,
 }); // point nunjucks to the proper directory for templates
-
-app.get( '/', (req, res, next) => {
-  const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
-  res.render( 'index', {title: 'Hall of Fame', people: people} );
-});
-
-app.get('/news', ( req, res, next) => {
-  res.send('You want news?');
-})
 
 app.listen(3000);
 console.log(`Server running on port: ${port}`);
