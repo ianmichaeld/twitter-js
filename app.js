@@ -15,6 +15,7 @@ const routes = require('./routes');
 app.use(volleyball);
 
 app.use('/', routes);
+app.use(express.static('public'));
 
 app.use( '/special', (req, res, next) => {
   res.send( 'Aren\'t you special?');

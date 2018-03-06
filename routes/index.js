@@ -12,10 +12,8 @@ router.get('/', function (req, res) {
 //   res.render( 'layout' )
 // })
 
-router.use(express.static('public'))
-
 router.get( '/users/:name', function (req, res) {
-  console.log( tweetBank.find( (tweet) => tweet.name===req.params.name ));
+  console.log(tweetBank.find(tweet => tweet.name.indexOf(req.params.name) > -1));
 });
 
 module.exports = router;

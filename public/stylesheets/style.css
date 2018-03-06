@@ -51,6 +51,7 @@ code {
   height: 48px;
   width: 48px;
   content:url("http://lorempixel.com/48/48");
+  margin-right: 10px;
 }
 .content {
   margin-left: 60px;
