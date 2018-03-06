@@ -4,7 +4,8 @@
   "description": "Twitter mirror",
   "main": "index.js",
   "scripts": {
-    "test": "twitter"
+    "test": "twitter",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/ianmichaeld/twitter-js#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "chalk": "^2.3.2",
+    "express": "^4.16.2",
+    "volleyball": "^1.4.1"
   }
 }
