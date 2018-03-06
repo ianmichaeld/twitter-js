@@ -14,14 +14,21 @@ router.get('/', function (req, res) {
 
 router.get('/users/:name', function(req, res) {
   var name = req.params.name;
-  var list = tweetBank.find( (tweet) => tweet.name === name);
-  res.render( 'index', { tweets: list } );
+  var tweetsByName = tweetBank.find( {name: name});
+  res.render( 'index', { tweets: tweetsByName, showForm: true } );
 });
 
 router.get('/tweets/:id', function(req, res) {
   var id = Number(req.params.id);
-  var list = tweetBank.find( (tweet) => tweet.id === id);
-  res.render( 'index', { tweets: list } );
+  var tweetsById = tweetBank.find( {id: id});
+  res.render( 'index', { tweets: tweetsById } );
+});
+
+router.post('/tweets', function(req, res) {
+  var name = req.body.name;
+  var text = req.body.text;
+  tweetBank.add(name, text);
+  res.redirect('/');
 });
 
 module.exports = router;

@@ -17,11 +17,6 @@ app.use(volleyball);
 app.use('/', routes);
 app.use(express.static('public'));
 
-app.use( '/special', (req, res, next) => {
-  res.send( 'Aren\'t you special?');
-  console.log( chalk.blue( 'Special area entered' ) );
-  next();
-})
 app.set('view engine', 'html'); // have res.render work with html files
 app.engine('html', nunjucks.render); // when giving html files to res.render, tell it to use nunjucks
 nunjucks.configure('views', {

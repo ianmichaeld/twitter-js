@@ -44,7 +44,6 @@ code {
 .tweetbox {
   list-style-type: none;
   padding: 7px;
-  height: 48px;
 }
 
 .tweetbox img {
@@ -59,4 +58,8 @@ code {
 }
 .content .by {
   font-weight: bold;
+}
+
+.inputForm {
+  margin-bottom: 20px;
 }
