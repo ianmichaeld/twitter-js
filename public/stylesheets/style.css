@@ -42,6 +42,7 @@ code {
 }
 
 .tweetbox {
+  list-style-type: none;
   padding: 7px;
 }
 

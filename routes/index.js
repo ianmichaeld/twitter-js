@@ -14,4 +14,8 @@ router.get('/', function (req, res) {
 
 router.use(express.static('public'))
 
+router.get( '/users/:name', function (req, res) {
+  console.log( tweetBank.find( (tweet) => tweet.name===req.params.name ));
+});
+
 module.exports = router;
