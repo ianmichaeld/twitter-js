@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  background-color: wheat;
   /* The html and body elements cannot have any padding or margin. */
 }
 
@@ -19,7 +20,6 @@ body {
   height: 60px;
   background-color: #f5f5f5;
 }
-
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -50,7 +50,7 @@ code {
   float: left;
   height: 48px;
   width: 48px;
-  content:url("http://lorempixel.com/48/48");
+  content: url('http://lorempixel.com/48/48');
   margin-right: 10px;
 }
 .content {
@@ -62,4 +62,12 @@ code {
 
 .inputForm {
   margin-bottom: 20px;
+}
+
+.user {
+  text-align: center;
+}
+
+.centered {
+  text-align: center;
 }
